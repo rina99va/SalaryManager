@@ -26,8 +26,8 @@ public class StatisticsController {
 
     @GetMapping(value = "/read")
     public StatisticUniqueResponse getStatistics() {
-        Set<String> uniqueNames = statisticService.getUniqueNames();
-        Set<String> uniqueTitles = statisticService.getUniqueTitles();
+        final Set<String> uniqueNames = statisticService.getUniqueNames();
+        final Set<String> uniqueTitles = statisticService.getUniqueTitles();
         return new StatisticUniqueResponse(uniqueNames.size(), uniqueTitles.size());
     }
 
